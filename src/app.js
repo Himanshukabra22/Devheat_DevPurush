@@ -1,12 +1,13 @@
 const express = require("express");
 require("./db/connection");
-const student = require("./models/student");
-const studentRouter = require("./routers/routes")
+const student = require("./models/students");
+// const studentRouter = require("./routes/routes")
 const multer = require("multer")
 const fs = require("fs")
+const {PORT} = require("../ignore")
 
 const app = express();
-const port = process.env.PORT || 8000;
+const port = PORT || 3000;
 
 app.get("/", (req,res) => {
     res.send("You are at home page");
@@ -16,7 +17,7 @@ app.get("/", (req,res) => {
 // we only need it for post and put requests and not for get or delete requests
 app.use(express.json());
 // Regestiering the Router
-app.use(studentRouter);
+// app.use(studentRouter);
 
 const storage = multer.diskStorage({
     destination:(req,file,cb) =>{
@@ -47,5 +48,5 @@ const upload = multer({storage:storage})
 // })
  
 app.listen(port, () => {
-    console.log(`Port is listening at ${port}`);
+    console.log(`Port is listening at ${port}\nhttp://localhost:${port}`);
 })
