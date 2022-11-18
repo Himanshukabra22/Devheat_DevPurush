@@ -4,22 +4,74 @@ const validator = require("validator");
 
 
 const studentSchema = new mongoose.Schema({
-    name: {
-        type:String
+    firstname: {
+        type:String,
+        required:true
+    },
+    lastname: {
+        type:String,
+        required:true
+    },
+    gender: {
+        type:String,
+        required:true
+    },
+    batch: {
+        type:String,
+        required:true
+    },
+    branch: {
+        type:String,
+        required:true
+    },
+    city: {
+        type:String,
+        required:true
+    },
+    state: {
+        type:String,
+        required:true
+    },
+    contact: {
+        type:Number,
+        required:true,
+        unique:true
     },
     email: {
-        type:String
+        type:String,
+        required:true,
+        validate(value){
+            if(!validator.isEmail(value)){
+                throw new Error("No such email exists.");
+            }
+        }
     },
-    phone:{
-        type:Number
+    linkedin: {
+        type:String,
+        required:true,
+        unique:true
     },
-    address:{
-        type:String
+    instagram: {
+        type:String,
+        required:true,
+        unique:true
     },
-    img:{
-        data:Buffer,
-        contentType: String,
-    }
+    designation: {
+        type:String,
+        required:true
+    },
+    skills:{
+        type:String,
+        required:true
+    },
+    about:{
+        type:String,
+        required:true
+    },
+    // img:{
+    //     data:Buffer,
+    //     contentType: String,
+    // }
 });
 
 //we will create a new connection
