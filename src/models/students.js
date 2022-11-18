@@ -17,7 +17,7 @@ const studentSchema = new mongoose.Schema({
         required:true
     },
     batch: {
-        type:String,
+        type:Number,
         required:true
     },
     branch: {
@@ -68,6 +68,14 @@ const studentSchema = new mongoose.Schema({
         type:String,
         required:true
     },
+    password:{
+        type:Number,
+        required:true
+    },
+    cpassword:{
+        type:Number,
+        required:true
+    }
     // img:{
     //     data:Buffer,
     //     contentType: String,
