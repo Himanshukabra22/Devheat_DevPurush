@@ -5,6 +5,9 @@ const router = express.Router();
 const userSchema = require("../models/students")
 
 
+router.get("/", (req, res) => {
+  res.render('home')
+});
 router.get("/login", (req, res) => {
   res.render("login");
 });
@@ -16,10 +19,6 @@ router.get("/contact", (req, res) => {
 });
 router.get("/signup", (req, res) => {
   res.render('Sign_up')
-});
-
-router.get("/", (req, res) => {
-  res.render('home')
 });
 
 router.get("/profilepage", (req, res) => {

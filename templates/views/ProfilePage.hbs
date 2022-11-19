@@ -64,29 +64,19 @@
     <!-- <section style="background-color: #eee;"> -->
     <section style="background-color: #d2a475;">
       <div class="container py-4 px-2">
-        <div class="row">
-          <div class="col">
-            <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4">
-              <ol class="breadcrumb mb-0">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item"><a href="#">User</a></li>
-                <li class="breadcrumb-item active" aria-current="page">User
-                  Profile</li>
-              </ol>
-            </nav>
-          </div>
-        </div>
+        
 
         <div class="row">
           <div class="col-lg-4">
             <div class="card mb-4">
               <div class="card-body text-center cardCSS">
                 <img
-                  src="./Profile-Avatar-PNG.png"
-                  alt="avatar"
+                  src="https://pngtree.com/freepng/user-vector-avatar_4830521.html"
+                  alt=""
                   class="rounded-circle img-fluid"
                   style="width: 150px;"
                 />
+                
                 <h5 class="my-3">{{name}}</h5>
                 <p class="text-muted mb-1 my-10">{{designation}}</p>
                 <!-- <p class="text-muted mb-4">Bay Area, San Francisco, CA</p> -->
@@ -129,7 +119,7 @@
                       </div>
                       <div class="col-sm-9">
                         <a
-                          href="https://www.linkedin.com/in/deepak-dangi-873a6822a/"
+                          href="{{linkedin}}"
                           target="_blank"
                         >{{firstname}} {{lastname}}</a>
                       </div>
@@ -201,9 +191,6 @@
                     </p>
                     <ul class="list-group list-group-flush cardCSS">
                       <li class="list-group-item cardCSS">{{skills}}</li>
-                      <li class="list-group-item cardCSS">UI/UX Designer</li>
-                      <li class="list-group-item cardCSS">Blockchain</li>
-                      <li class="list-group-item cardCSS">Expert On Codeforces</li>
                     </ul>
                   </div>
                 </div>
