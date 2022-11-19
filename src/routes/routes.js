@@ -1,4 +1,5 @@
 const express = require("express");
+const mongoose = require("mongoose");
 
 const router = express.Router();
 const userSchema = require("../models/students")
@@ -258,20 +259,36 @@ try{
 
 //sign in
 
-router.post("/login", (req,res) =>{
-  const {
-        firstname,
-        email,
-        password
-  } = req.body;
-  userSchema.findOne({email:email},(err,result) =>{
-    console.log(result);
-    if (email === result.email && password === result.password) {
-      res.render('home')
-    }else{
-      console.log(err); 
+// router.post("/login", (req,res) =>{
+//   const {
+//         firstname,
+//         email,
+//         password
+//   } = req.body;
+//   userSchema.findOne({email:email},(err,result) =>{
+//     console.log(result);
+//     if(result === null)
+//     {
+//         res.send("no such data found!!")
+//     }
+//     else{
+//     if (email === result.email && password === result.password) {
+//       res.send("hi")
+//     }else{
+//       res.send("wrong credentials!!")
+//     }}
+//   })
+// })
+
+router.post("/login", async (req,res) =>{
+    try{
+        let findData = await userSchema.findOne({email:req.body.email})
+        
+        res.json({findData})
+        console.log(findData);
+    }catch(err){
+        console.log(err);
     }
-  })
 })
 
 
