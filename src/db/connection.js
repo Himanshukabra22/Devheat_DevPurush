@@ -12,7 +12,7 @@ mongoose.connect(`${MONGO}`,{
     socketTimeoutMS: 45000, // Close sockets after 45 seconds of inactivity
     family: 4 // Use IPv4, skip trying IPv6
 }).then(() =>{
-    console.log("Connection is sucessful"); 
+    console.log("Connection is successful"); 
 }).catch((e) =>{
     console.log("No connection"); 
     console.log(e); 

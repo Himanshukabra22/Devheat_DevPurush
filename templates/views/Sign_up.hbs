@@ -58,17 +58,17 @@
                         <div class="col-md-6 mt-3"><label class="labels">Gender</label></div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="gender" id="inlineRadio1"
-                                value="option1">
+                                value="male">
                             <label class="form-check-label" for="inlineRadio1">Male</label>
                         </div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="gender" id="inlineRadio2"
-                                value="option2">
+                                value="female">
                             <label class="form-check-label" for="inlineRadio2">Female</label>
                         </div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="gender" id="inlineRadio2"
-                                value="option2">
+                                value="others">
                             <label class="form-check-label" for="inlineRadio2">Others</label>
                         </div>
                     </div>
@@ -76,7 +76,7 @@
 
                     <div>
                         <div class="col-md-6 mt-3"><label class="labels">Batch</label></div>
-                        <select class="form-select form-select-sm form-control" aria-label=".form-select-sm example" name="batch">
+                        {{!-- <select class="form-select form-select-sm form-control" aria-label=".form-select-sm example" name="batch">
                             <option selected>Select Batch</option>
                             <option value="1">2021</option>
                             <option value="2">2020</option>
@@ -89,7 +89,9 @@
                             <option value="9">2013</option>
                             <option value="10">2012</option>
                             <option value="11">2011</option>
-                            <option value="12">2010</option>
+                            <option value="12">2010</option> --}}
+                            {{!-- <input type="range" name="batch" id=""  max="2030" min="1940" class="form-control"> --}}
+                            <input type="number" name="batch" id="" min="1940" max="2030" class="form-control" value="2020">
                         </select>
                     </div>
 
@@ -97,12 +99,12 @@
                         <div class="col-md-6 mt-3"><label class="labels">Branch</label></div>
                         <select class="form-select form-select-sm form-control" aria-label=".form-select-sm example" name="branch">
                             <option selected>Select Branch</option>
-                            <option value="1">CSE</option>
-                            <option value="2">IT</option>
-                            <option value="3">ECE</option>
-                            <option value="4">EE</option>
-                            <option value="5">ME</option>
-                            <option value="6">CE</option>
+                            <option value="CSE">CSE</option>
+                            <option value="IT">IT</option>
+                            <option value="ECE">ECE</option>
+                            <option value="EE">EE</option>
+                            <option value="ME">ME</option>
+                            <option value="CE">CE</option>
                         </select>
                     </div>
 

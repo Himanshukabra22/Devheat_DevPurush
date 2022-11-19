@@ -49,12 +49,12 @@ const studentSchema = new mongoose.Schema({
     linkedin: {
         type:String,
         // required:true,
-        unique:true
+        // unique:true
     },
     instagram: {
         type:String,
         // required:true,
-        unique:true
+        // unique:true
     },
     designation: {
         type:String
@@ -69,11 +69,11 @@ const studentSchema = new mongoose.Schema({
         // required:true
     },
     password:{
-        type:Number
+        type:String
         // required:true
     },
     cpassword:{
-        type:Number
+        type:String
         // required:true
     }
     // img:{
