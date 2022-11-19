@@ -11,13 +11,13 @@ router.get("/login", (req, res) => {
 router.get("/search", (req, res) => {
   res.render("search");
 });
+router.get("/contact", (req, res) => {
+  res.render("contact");
+});
 router.get("/signup", (req, res) => {
   res.render('Sign_up')
 });
 
-router.get("/search", (req, res) => {
-  res.render('Sign_up')
-});
 router.get("/", (req, res) => {
   res.render('home')
 });
@@ -216,13 +216,7 @@ router.post("/search", async(req,res)=>{
     console.log(err);
   }
 })
- 
-router.get("/aboutus", (req, res) => {
-  res.render('aboutus')
-});
 
-
- 
 router.post("/signup", async(req,res) =>{
 try{
   const{
