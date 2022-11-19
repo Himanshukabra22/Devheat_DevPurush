@@ -234,7 +234,7 @@ try{
       })
       userData.save(err=>{
         if (err) {
-          console.log("error");
+          console.log(err);
         }
       })
       res.redirect("/signup");7
