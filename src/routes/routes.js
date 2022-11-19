@@ -1,7 +1,7 @@
 const express = require("express");
-// const { find, findOne } = require("../models/userData");
-// const userData = require("../models/userData.js");
+
 const router = express.Router();
+const userSchema = require("../models/students")
 
 
 router.get("/login", (req, res) => {
@@ -23,43 +23,50 @@ router.get("/signup", (req, res) => {
 //   }
 // });
 
-router.post("/signup", async (req, res) => {
-  try {
-    // let x = await userData.find({email:req.body.email});
-    // if((x.length)!=0)
-    // {
-    //   res.send("Email Already Exists");
-    // }
-    if (!(req.body.password === req.body.Cpassword)) {
-      res.send("passwords not matching!!");
-    } else{
-      const savedData = await userData.create({
-        firstname: req.body.firstname,
-        lastname: req.body.lastname,
-        gender: req.body.gender,
-        batch: req.body.batch,
-        branch: req.body.branch,
-        city: req.body.city,
-        state: req.body.state,
-        contact: req.body.contact,
-        email: req.body.email,
-        linkedin: req.body.linkedin,
-        instagram: req.body.instagram,
-        designation: req.body.designation,
-        skills: req.body.skills,
-        about: req.body.about,
-        password: req.body.password,
-        cpassword: req.body.cpassword,
-      });
-      console.log(savedData);
-      // res.status(200).json({savedData});
-      res.redirect("/signup");
-    };
-  } catch (error) {
-    res.send(error);
-  }
-});
-module.exports = router;
+// router.post("/signup", async (req, res) => {
+//   try {
+//     // let x = await userData.find({email:req.body.email});
+//     // if((x.length)!=0)
+//     // {
+//     //   res.send("Email Already Exists");
+//     // }
+//     // console.log(req.body);
+//     // res.send(req.body);
+//     if (!(req.body.password === req.body.cpassword)) {
+//       res.send("passwords not matching!!");
+//     } else{
+//     //     const user = new student(req.body);
+//     //  const createUser = await user.save();
+//     res.status(201).send(createUser);
+//     const savedData = await userData.create({
+//         firstname: req.body.firstname,
+//         lastname: req.body.lastname,
+//         gender: req.body.gender,
+//         batch: req.body.batch,
+//         branch: req.body.branch,
+//         city: req.body.city,
+//         state: req.body.state,
+//         contact: req.body.contact,
+//         email: req.body.email,
+//         linkedin: req.body.linkedin,
+//         instagram: req.body.instagram,
+//         designation: req.body.designation,
+//         skills: req.body.skills,
+//         about: req.body.about,
+//         password: req.body.password,
+//         cpassword: req.body.cpassword
+//     });
+//     //  const savedData = await user.save();
+//       console.log(savedData);
+//       res.send(req.body);
+//       // res.status(200).json({savedData});
+//       res.redirect("/signup");
+//     };
+//   } catch (error) {
+//     res.send(error);
+//   }
+// });
+// module.exports = router;
 
 
 
@@ -179,4 +186,66 @@ module.exports = router;
 
 
 // //export
-// module.exports = router;
+
+
+
+ 
+router.post("/signup", async(req,res) =>{
+try{
+  const{
+      firstname,
+        lastname,
+        gender,
+        batch,
+        branch,
+        city,
+        state,
+        contact,
+        email,
+        linkedin,
+        instagram,
+        designation,
+        skills,
+        about,
+        password,
+        cpassword
+  } = req.body; 
+    console.log(req.body);
+    // res.send(req.body);
+   
+    if (password === cpassword) {
+      const userData = new userSchema({
+        firstname,
+        lastname,
+        gender,
+        batch,
+        branch,
+        city,
+        state,
+        contact,
+        email,
+        linkedin,
+        instagram,
+        designation,
+        skills,
+        about,
+        password,
+        cpassword
+      })
+      userData.save(err=>{
+        if (err) {
+          console.log("error");
+        }
+      })
+      res.redirect("/signup");
+    }
+    else{
+      res.send("passwords not matching")
+    }
+ }catch(error){
+   res.render("ahh! error occured")
+ }
+})
+
+
+module.exports = router;

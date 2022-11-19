@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  <form action="post">
+  <form action="/signup" method="post">
     <div class="container rounded bg-white mt-5 mb-5 px-2">
         <div class="row ctr">
             <!-- <div class="col-md-3 border-right">
@@ -180,8 +180,12 @@
                     <div class="col-md-6"><label class="labels">State/Region</label><input type="text"
                             class="form-control" value="" placeholder="state"></div>
                 </div> -->
-                <div class="mt-0 mb-2 text-center"><button class="btn btn-primary profile-button" type="button">Save
-                        Profile</button></div>
+                <div class="mt-0 mb-2 text-center">
+                    {{!-- <button class="btn btn-primary profile-button" type="submit">Save
+                        Profile</button> --}}
+                        <input type="submit" value="save profile">
+                        </div>
+
             </div>
         </div>
         <!-- <div class="col-md-4">
@@ -199,6 +203,8 @@
     </div>
     </div>
     </div>
+    <input type="submit" value="save profile">
+
 </form>
 
 </body>

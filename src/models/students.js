@@ -5,41 +5,41 @@ const validator = require("validator");
 
 const studentSchema = new mongoose.Schema({
     firstname: {
-        type:String,
-        required:true
+        type:String
+        // required:true
     },
     lastname: {
-        type:String,
-        required:true
+        type:String
+        // required:true
     },
     gender: {
-        type:String,
-        required:true
+        type:String
+        // required:true
     },
     batch: {
-        type:Number,
-        required:true
+        type:Number
+        // required:true
     },
     branch: {
-        type:String,
-        required:true
+        type:String
+        // required:true
     },
     city: {
-        type:String,
-        required:true
+        type:String
+        // required:true
     },
     state: {
-        type:String,
-        required:true
+        type:String
+        // required:true
     },
     contact: {
         type:Number,
-        required:true,
+        // required:true,
         unique:true
     },
     email: {
         type:String,
-        required:true,
+        // required:true,
         validate(value){
             if(!validator.isEmail(value)){
                 throw new Error("No such email exists.");
@@ -48,33 +48,33 @@ const studentSchema = new mongoose.Schema({
     },
     linkedin: {
         type:String,
-        required:true,
+        // required:true,
         unique:true
     },
     instagram: {
         type:String,
-        required:true,
+        // required:true,
         unique:true
     },
     designation: {
-        type:String,
-        required:true
+        type:String
+        // required:true
     },
     skills:{
-        type:String,
-        required:true
+        type:String
+        // required:true
     },
     about:{
-        type:String,
-        required:true
+        type:String
+        // required:true
     },
     password:{
-        type:Number,
-        required:true
+        type:Number
+        // required:true
     },
     cpassword:{
-        type:Number,
-        required:true
+        type:Number
+        // required:true
     }
     // img:{
     //     data:Buffer,
