@@ -16,7 +16,37 @@
 </head>
 
 <body style="background-color: #d2a475">
+        <header><!--NAVBAR-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container">
+                    <!-- Navbar brand -->
+                    <a class="navbar-brand me-2" href="!!!link here!!!!">       <!-- idhar link daal-->
+                        <img src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp" height="16" alt="MDB Logo"
+                            loading="lazy" style="margin-top: -1px;" />
+                    </a>
+                    <div class="collapse navbar-collapse" id="navbarButtonsExample">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Dashboard</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Profile</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Search</a>
+                            </li>
+                        </ul>
+                        <div class="d-flex align-items-center">
+                            <button type="button" class="btn btn-link px-3 me-2">{{name}}</button>
+                            <button type="button" class="btn btn-primary me-3">Sign up for free</button>
+                        </div>
+                    </div>
 
+                </div>
+
+            </nav>
+
+    </header>
     <!-- <section style="background-color: #eee;"> -->
     <section style="background-color: #d2a475;">
         <div class="container py-4 px-2">
@@ -38,7 +68,7 @@
                         <div class="card-body text-center cardCSS">
                             <img src="/Profile-Avatar-PNG.png" alt="avatar" class="rounded-circle img-fluid"
                                 style="width: 150px;">
-                            <h5 class="my-3">Virat Kohli</h5>
+                            <h5 class="my-3">{{name}}</h5>
                             <p class="text-muted mb-1 my-10">Full Stack Developer</p>
                             <!-- <p class="text-muted mb-4">Bay Area, San Francisco, CA</p> -->
                             <div class="d-flex justify-content-center mb-2 my-4">
@@ -88,7 +118,7 @@
                                             <p class="mb-0">Email</p>
                                         </div>
                                         <div class="col-sm-9">
-                                            <p class="text-muted mb-0">kohli18@gmail.com</p>
+                                            <p class="text-muted mb-0">{{email}}</p>
                                         </div>
                                     </div>
                                     <hr>
@@ -97,7 +127,7 @@
                                             <p class="mb-0">Contact</p>
                                         </div>
                                         <div class="col-sm-9">
-                                            <p class="text-muted mb-0">9874563210</p>
+                                            <p class="text-muted mb-0">{{contact}}</p>
                                         </div>
                                     </div>
                                     <hr>
@@ -113,7 +143,7 @@
                                               </svg> -->
 
                                             <a href="https://www.linkedin.com/in/deepak-dangi-873a6822a/"
-                                                target="_blank">Virat Kohli</a>
+                                                target="_blank">{{firstname}} {{lastname}}</a>
 
                                             <!-- <p class="text-muted mb-0"><a href="https://www.linkedin.com/in/deepak-dangi-873a6822a/"></a></p> -->
                                         </div>
@@ -165,7 +195,7 @@
                                     <p class="mb-0">Full Name</p>
                                 </div>
                                 <div class="col-sm-9">
-                                    <p class="text-muted mb-0">Virat Kohli </p>
+                                    <p class="text-muted mb-0">{{firstname}} {{lastname}}</p>
                                 </div>
                             </div>
                             <hr>
@@ -174,7 +204,7 @@
                                     <p class="mb-0">Gender</p>
                                 </div>
                                 <div class="col-sm-9">
-                                    <p class="text-muted mb-0">Male</p>
+                                    <p class="text-muted mb-0">{{gender}}</p>
                                 </div>
                             </div>
                             <hr>
@@ -183,7 +213,7 @@
                                     <p class="mb-0"> College </p>
                                 </div>
                                 <div class="col-sm-9">
-                                    <p class="text-muted mb-0">Indian Institute of Information Technology, Surat </p>
+                                    <p class="text-muted mb-0">{{college}}</p>
                                 </div>
                             </div>
                             <hr>
@@ -192,7 +222,7 @@
                                     <p class="mb-0">Batch</p>
                                 </div>
                                 <div class="col-sm-9">
-                                    <p class="text-muted mb-0">2021</p>
+                                    <p class="text-muted mb-0">{{batch}}</p>
                                 </div>
                             </div>
                             <hr>
@@ -201,7 +231,7 @@
                                     <p class="mb-0">Address</p>
                                 </div>
                                 <div class="col-sm-9">
-                                    <p class="text-muted mb-0">Kamrej, Surat</p>
+                                    <p class="text-muted mb-0">{{address}}</p>
                                 </div>
                             </div>
                         </div>
@@ -218,7 +248,7 @@
                                     </p>
 
                                     <ul class="list-group list-group-flush cardCSS">
-                                        <li class="list-group-item cardCSS">Full Stack Developer</li>
+                                        <li class="list-group-item cardCSS">{{skills}}</li>
                                         <li class="list-group-item cardCSS">UI/UX Designer</li>
                                         <li class="list-group-item cardCSS">Blockchain</li>
                                         <!-- <li class="list-group-item">Flutter</li>
