@@ -15,12 +15,55 @@
     <title>Profile Page</title>
 </head>
 
-<body style="background-color: #d2a475">
+<body style="background-color: #bdf2fc">
 
+    <header><!--NAVBAR-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container">
+                    <!-- Navbar brand -->
+                    <a class="navbar-brand me-2" href="!!!link here!!!!">       <!-- idhar link daal-->
+                        <img src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp" height="16" alt="MDB Logo"
+                            loading="lazy" style="margin-top: -1px;" />
+                    </a>
+            
+                    <!-- Toggle button
+                    <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarButtonsExample"
+                        aria-controls="navbarButtonsExample" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-bars"></i>
+                    </button> -->
+            
+                    <div class="collapse navbar-collapse" id="navbarButtonsExample">
+                        <!-- Side Links -->
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Dashboard</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Profile</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Search</a>
+                            </li>
+                        </ul>
+                        
+                        <!-- Login/SignUp Options -->
+                        <div class="d-flex align-items-center">
+                            <button type="button" class="btn btn-link px-3 me-2">Login</button>
+                            <button type="button" class="btn btn-primary me-3">Sign up for free</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </nav>
+
+    </header>
+
+    <main>
     <!-- <section style="background-color: #eee;"> -->
-    <section style="background-color: #d2a475;">
+    <section style="background-color: #bdf2fc;">
         <div class="container py-4 px-2">
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col">
                     <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4">
                         <ol class="breadcrumb mb-0">
@@ -30,11 +73,16 @@
                         </ol>
                     </nav>
                 </div>
-            </div>
+            </div> -->
+
+            <!-- all body -->
 
             <div class="row">
+                
+                <!-- Left cards -->
+
                 <div class="col-lg-4">
-                    <div class="card mb-4">
+                    <div class="card shadow mb-4">
                         <div class="card-body text-center cardCSS">
                             <img src="/Profile-Avatar-PNG.png" alt="avatar" class="rounded-circle img-fluid"
                                 style="width: 150px;">
@@ -157,6 +205,8 @@
 
                 </div>
 
+                <!-- Right Cards -->
+
                 <div class="col-lg-8">
                     <div class="card mb-4 cardCSS">
                         <div class="card-body">
@@ -211,7 +261,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="card mb-4 mb-md-0">
-                                <div class="card-body cardCSS">
+                                <div class="card-body cardCSS rounded-3">
                                     <p class="mb-4"><span class="text-primary font-italic me-1">Skills And Experience
                                         </span>
 
@@ -282,6 +332,30 @@
             </div>
         </div>
     </section>
+</main>
+
+<footer>
+    <div class="card text-center">
+        <div class="card-header">
+          <ul class="nav nav-tabs card-header-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="true" href="#">Team</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link active" href="#">2nd Option</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active">3rd Option</a>
+            </li> -->
+          </ul>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Special title treatment</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="btn btn-primary">Go to Top</a>
+        </div>
+      </div>
+</footer>
 
 </body>
 

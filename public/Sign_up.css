@@ -1,6 +1,6 @@
 body {
     /* background: rgb(99, 39, 120) */
-    background-color: #92B4EC;
+    background-color: #bdf2fc;
 }
 
 .form-control:focus {
@@ -8,6 +8,13 @@ body {
     border-color: #BA68C8
 }
 
+#adBtn
+{
+    background-color: #0d6efd;
+    border-radius: 5px;
+    border: none;
+    
+}
 .profile-button {
     background: rgb(99, 39, 120);
     box-shadow: none;
