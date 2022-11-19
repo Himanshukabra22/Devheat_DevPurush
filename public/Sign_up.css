@@ -60,6 +60,7 @@ input::-webkit-inner-spin-button {
 
 .ctr{
     justify-content: center;
+    margin: 2rem;
 }
 
 .imgBtn
