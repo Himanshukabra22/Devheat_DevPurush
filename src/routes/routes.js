@@ -11,6 +11,14 @@ router.get("/signup", (req, res) => {
   res.render('Sign_up')
 });
 
+router.get("/search", (req, res) => {
+  res.render('Sign_up')
+});
+
+router.get("/profilepage", (req, res) => {
+  res.render('ProfilePage')
+});
+
 // router.get("/delete", (req, res) => {
 //   res.render("delete");
 // });
@@ -259,12 +267,33 @@ router.post("/login", (req,res) =>{
   userSchema.findOne({email:email},(err,result) =>{
     console.log(result);
     if (email === result.email && password === result.password) {
-      res.render("/")
+      res.render('home')
     }else{
       console.log(err); 
     }
   })
 })
 
+
+ // Get the Individual studnt data using Id
+ 
+ router.get("/students/:email", async (req,res) =>{      //we can get anything like name email etc,
+ 
+      try {
+         const _id = req.params.id;
+         const studentData = await student.findById(_id);
+         // console.log(req.params);
+         // console.log(req.params.id);
+         if(!studentData){
+             return res.status(404).send();
+         }
+         else{
+             res.send(studentData);
+         }
+      } catch (e) {
+         res.status(500).send(e);           //status 500 is internal server error(i.e Data not present)
+      }
+ });
+ 
 
 module.exports = router;
