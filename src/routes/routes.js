@@ -321,7 +321,7 @@ router.post("/login", async (req,res) =>{
              return res.status(404).send("no data found");
          }
          else{
-             res.render("ProfilePage" , {firstname:studentData.firstname,lastname:studentData.lastname, gender:studentData.gender,batch:studentData.batch,branch:studentData.branch,contact:studentData.contact,email:studentData.email,linkedin:studentData.linkedin,instagram:studentData.instagram})
+             res.render("ProfilePage" , {firstname:studentData.firstname,lastname:studentData.lastname, gender:studentData.gender,batch:studentData.batch,college:studentData.college,branch:studentData.branch,city:studentData.city,state:studentData.state,contact:studentData.contact,email:studentData.email,linkedin:studentData.linkedin,instagram:studentData.instagram,designation:studentData.designation,skills:studentData.skills})
          }
       } catch (e) {
          res.status(500).send(e);           //status 500 is internal server error(i.e Data not present)
