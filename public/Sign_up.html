@@ -12,67 +12,42 @@
 </head>
 
 <body>
-    
     <header><!--NAVBAR-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container">
-                <!-- Navbar brand -->
-                <a class="navbar-brand me-2" href="!!!link here!!!!">       <!-- idhar link daal-->
-                    <img src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp" height="16" alt="MDB Logo"
-                        loading="lazy" style="margin-top: -1px;" />
-                </a>
-        
-                <!-- Toggle button
-                <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarButtonsExample"
-                    aria-controls="navbarButtonsExample" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fas fa-bars"></i>
-                </button> -->
-        
-                <div class="collapse navbar-collapse" id="navbarButtonsExample">
-                    <!-- Side Links -->
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Dashboard</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Profile</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Search</a>
-                        </li>
-                    </ul>
-                    
-                    <!-- Login/SignUp Options -->
-                    <div class="d-flex align-items-center">
-                        <button type="button" class="btn btn-link px-3 me-2">Login</button>
-                        <button type="button" class="btn btn-primary me-3">Sign up for free</button>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container">
+                    <!-- Navbar brand -->
+                    <a class="navbar-brand me-2" href="!!!link here!!!!">       <!-- idhar link daal-->
+                        <img src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp" height="16" alt="MDB Logo"
+                            loading="lazy" style="margin-top: -1px;" />
+                    </a>
+                    <div class="collapse navbar-collapse" id="navbarButtonsExample">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Dashboard</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Profile</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Search</a>
+                            </li>
+                        </ul>
+                        <div class="d-flex align-items-center">
+                            <button type="button" class="btn btn-link px-3 me-2">Login</button>
+                            <button type="button" class="btn btn-primary me-3">Sign up for free</button>
+                        </div>
                     </div>
+
                 </div>
 
-            </div>
+            </nav>
 
-        </nav>
-
-</header>
-
+    </header>
+  <form action="/signup" method="post">
     <div class="container rounded bg-white mt-5 mb-5 px-2">
         <div class="row ctr">
-            <!-- <div class="col-md-3 border-right">
-                <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5"
-                        width="150px"
-                        src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"><span
-                        class="font-weight-bold">Create Profile</span>
-                     <span class="text-black-50">edogaru@mail.com.my</span>
-                    <span> </span>
-                </div>
-            </div>-->
             <div class="col-md-5 border-right">
                 <div class="p-3 py-4">
-                    <!-- <div class="d-flex justify-content-between align-items-center mb-3">
-                        <h3 class="text-right">Create Account</h3>
-                        
-                    </div> -->
-
                     <div class="col-md-36 border-right">
                         <div class="d-flex flex-column align-items-center text-center p-3 py-1"><img
                                 class="rounded-circle mt-0" width="150px"
@@ -84,33 +59,31 @@
                                     <input type="file" class="form-control d-none" id="customFile1" />
                                 </div>
                             </div>
-                            <!-- <span class="text-black-50">edogaru@mail.com.my</span> -->
-                            <!-- <span> </span> -->
                         </div>
                     </div>
 
                     <div class="row mt-2">
                         <div class="col-md-6"><label class="labels">Name</label><input type="text" class="form-control"
-                                placeholder="First name" value=""></div>
+                                placeholder="First name" value="" name="firstname"></div>
                         <div class="col-md-6"><label class="labels">Last Name</label><input type="text"
-                                class="form-control" value="" placeholder="Last Name"></div>
+                                class="form-control" value="" placeholder="Last Name" name="lastname"></div>
                     </div>
 
                     <div>
                         <div class="col-md-6 mt-3"><label class="labels">Gender</label></div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                                value="option1">
+                            <input class="form-check-input" type="radio" name="gender" id="inlineRadio1"
+                                value="male">
                             <label class="form-check-label" for="inlineRadio1">Male</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                                value="option2">
+                            <input class="form-check-input" type="radio" name="gender" id="inlineRadio2"
+                                value="female">
                             <label class="form-check-label" for="inlineRadio2">Female</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                                value="option2">
+                            <input class="form-check-input" type="radio" name="gender" id="inlineRadio2"
+                                value="others">
                             <label class="form-check-label" for="inlineRadio2">Others</label>
                         </div>
                     </div>
@@ -118,152 +91,80 @@
 
                     <div>
                         <div class="col-md-6 mt-3"><label class="labels">Batch</label></div>
-                        <select class="form-select form-select-sm form-control" aria-label=".form-select-sm example">
-                            <option selected>Select Batch</option>
-                            <option value="1">2021</option>
-                            <option value="2">2020</option>
-                            <option value="3">2019</option>
-                            <option value="4">2018</option>
-                            <option value="5">2017</option>
-                            <option value="6">2016</option>
-                            <option value="7">2015</option>
-                            <option value="8">2014</option>
-                            <option value="9">2013</option>
-                            <option value="10">2012</option>
-                            <option value="11">2011</option>
-                            <option value="12">2010</option>
+                            <input type="number" name="batch" id="" min="1940" max="2030" class="form-control" value="2020">
                         </select>
                     </div>
 
                     <div>
                         <div class="col-md-6 mt-3"><label class="labels">Branch</label></div>
-                        <select class="form-select form-select-sm form-control" aria-label=".form-select-sm example">
+                        <select class="form-select form-select-sm form-control" aria-label=".form-select-sm example" name="branch">
                             <option selected>Select Branch</option>
-                            <option value="1">CSE</option>
-                            <option value="2">IT</option>
-                            <option value="3">ECE</option>
-                            <option value="4">EE</option>
-                            <option value="5">ME</option>
-                            <option value="6">CE</option>
+                            <option value="CSE">CSE</option>
+                            <option value="IT">IT</option>
+                            <option value="ECE">ECE</option>
+                            <option value="EE">EE</option>
+                            <option value="ME">ME</option>
+                            <option value="CE">CE</option>
                         </select>
                     </div>
-
                     <div class="row mt-3">
                         <div class="col-md-6"><label class="labels address">City</label><input type="text"
-                                class="form-control" placeholder="Enter Your City" value=""></div>
+                                class="form-control" placeholder="Enter Your City" value="" name="city"></div>
                         <div class="col-md-6"><label class="label address">State</label><input type="text"
-                                class="form-control" value="" placeholder="Enter Your State"></div>
+                                class="form-control" value="" placeholder="Enter Your State" name="state"></div>
                     </div>
-
-                    <!-- <div class="col-md-12"><label class="labels"></label><input type="text" class="form-control"
-                            placeholder="enter address line 1" value=""></div> -->
-
-
                     <div class="col-md-12 mt-3"><label class="labels">Contact Number</label><input type="number"
-                            class="form-control" placeholder="Enter Contact Number" value=""></div>
+                            class="form-control" placeholder="Enter Contact Number" value="" name="contact"></div>
 
-                    <!-- <div class="col-md-12"><label class="labels">Address Line 2</label><input type="text"
-                            class="form-control" placeholder="enter address line 2" value=""></div> -->
-
-                    <!-- <div class="col-md-12"><label class="labels">Postcode</label><input type="text" class="form-control"
-                            placeholder="enter address line 2" value=""></div> -->
-                    <!-- <div class="col-md-12"><label class="labels">State</label><input type="text" class="form-control"
-                            placeholder="enter address line 2" value=""></div> -->
-                    <!-- <div class="col-md-12"><label class="labels">Area</label><input type="text" class="form-control"
-                            placeholder="enter address line 2" value=""></div> -->
                     <div class="col-md-12 mt-3"><label class="labels">Email ID</label><input type="email"
-                            class="form-control" placeholder="Enter email id" value=""></div>
+                            class="form-control" placeholder="Enter email id" value="" name="email"></div>
 
                     <div class="col-md-12 mt-3"><label class="labels">LinkedIn handle</label><input type="url"
-                            class="form-control" placeholder="Enter LinkedIn handle" value=""></div>
+                            class="form-control" placeholder="Enter LinkedIn handle" value="" name="linkedin"></div>
                     <div class="col-md-12 mt-3"><label class="labels">Instagram handle</label><input type="url"
-                            class="form-control" placeholder="Enter Instagram handle" value=""></div>
+                            class="form-control" placeholder="Enter Instagram handle" value="" name="instagram"></div>
 
                     <div class="col-md-12 mt-3"><label class="labels Work">Current Designation</label><input type="text"
-                            class="form-control" placeholder="Designation" value=""></div>
+                            class="form-control" placeholder="Designation" value="" name="designation"></div>
 
 
                     <div class="col-md-12">
                         <div class="mt-3">
-                            <!-- <div class="d-flex justify-content-between align-items-center experience"><span>Edit
-                                    Experience</span><span class="border px-3 p-1 add-experience"><i
-                                        class="fa fa-plus"></i>&nbsp;Experience</span></div><br> -->
                             <div class="col-md-12"><label class="labels">Skills & Experience</label>
                                 <textarea name="skillset" id="skills" cols="30" rows="4"
-                                    class="form-control"></textarea>
-                                <!-- type="text" class="form-control" placeholder="Skills and Experience" value=""> -->
+                                    class="form-control" name="skills"></textarea>
                             </div> <br>
 
 
                             <div class="col-md-12 mt-1"><label class="labels">About</label>
                                 <textarea name="skillset" id="skills" cols="30" rows="3"
-                                    class="form-control"></textarea>
-                                <!-- type="text" class="form-control" placeholder="Skills and Experience" value=""> -->
+                                    class="form-control" name="about"></textarea>
                             </div> <br>
                             
                             <div class="row mt-2">
                                 <div class="col-md-6"><label class="labels">Password</label><input type="text" class="form-control"
-                                        placeholder="Password" value=""></div>
+                                        placeholder="Password" value="" name="password"></div>
                                 <div class="col-md-6"><label class="labels">Confirm Password</label><input type="text"
-                                        class="form-control" value="" placeholder="Confirm Password"></div>
+                                        class="form-control" value="" placeholder="Confirm Password" name="cpassword"></div>
                             </div>
-
-                            <!-- 
-                            <div class="col-md-12"><label class="labels">Additional Details</label><input type="text"
-                                    class="form-control" placeholder="additional details" value=""></div> -->
                         </div>
                     </div>
-                    <!-- <div class="col-md-12"><label class="labels">Education</label><input type="text"
-                            class="form-control" placeholder="education" value=""></div> -->
                 </div>
-                <!-- <div class="row mt-3">
-                    <div class="col-md-6"><label class="labels">Country</label><input type="text" class="form-control"
-                            placeholder="country" value=""></div>
-                    <div class="col-md-6"><label class="labels">State/Region</label><input type="text"
-                            class="form-control" value="" placeholder="state"></div>
-                </div> -->
-                <div class="mt-0 mb-2 text-center"><button class="btn btn-outline-info text-black" type="button">Save
-                    Profile</button></div>
+                <div class="mt-0 mb-2 text-center">
+                        <input type="submit" value="save profile">
+                        </div>
+
             </div>
         </div>
-        <!-- <div class="col-md-4">
-            <div class="p-3 py-5">
-                <div class="d-flex justify-content-between align-items-center experience"><span>Edit
-                        Experience</span><span class="border px-3 p-1 add-experience"><i
-                            class="fa fa-plus"></i>&nbsp;Experience</span></div><br>
-                <div class="col-md-12"><label class="labels">Experience in Designing</label><input type="text"
-                        class="form-control" placeholder="experience" value=""></div> <br>
-                <div class="col-md-12"><label class="labels">Additional Details</label><input type="text"
-                        class="form-control" placeholder="additional details" value=""></div>
-            </div>
-        </div> -->
     </div>
     </div>
     </div>
     </div>
+    <input type="submit" value="save profile">
 
-    <footer>
-        <div class="card text-center">
-            <div class="card-header">
-              <ul class="nav nav-tabs card-header-tabs">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="true" href="#">Team</a>
-                </li>
-                <!-- <li class="nav-item">
-                  <a class="nav-link active" href="#">2nd Option</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active">3rd Option</a>
-                </li> -->
-              </ul>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Special title treatment</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-primary">Go to Top</a>
-            </div>
-          </div>
-    </footer>
+</form>
+
+
 
 </body>
 

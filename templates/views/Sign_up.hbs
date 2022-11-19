@@ -12,25 +12,42 @@
 </head>
 
 <body>
+    <header><!--NAVBAR-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container">
+                    <!-- Navbar brand -->
+                    <a class="navbar-brand me-2" href="!!!link here!!!!">       <!-- idhar link daal-->
+                        <img src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp" height="16" alt="MDB Logo"
+                            loading="lazy" style="margin-top: -1px;" />
+                    </a>
+                    <div class="collapse navbar-collapse" id="navbarButtonsExample">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Dashboard</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Profile</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Search</a>
+                            </li>
+                        </ul>
+                        <div class="d-flex align-items-center">
+                            <button type="button" class="btn btn-link px-3 me-2">Login</button>
+                            <button type="button" class="btn btn-primary me-3">Sign up for free</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </nav>
+
+    </header>
   <form action="/signup" method="post">
     <div class="container rounded bg-white mt-5 mb-5 px-2">
         <div class="row ctr">
-            <!-- <div class="col-md-3 border-right">
-                <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5"
-                        width="150px"
-                        src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"><span
-                        class="font-weight-bold">Create Profile</span>
-                     <span class="text-black-50">edogaru@mail.com.my</span>
-                    <span> </span>
-                </div>
-            </div>-->
             <div class="col-md-5 border-right">
                 <div class="p-3 py-4">
-                    <!-- <div class="d-flex justify-content-between align-items-center mb-3">
-                        <h3 class="text-right">Create Account</h3>
-                        
-                    </div> -->
-
                     <div class="col-md-36 border-right">
                         <div class="d-flex flex-column align-items-center text-center p-3 py-1"><img
                                 class="rounded-circle mt-0" width="150px"
@@ -42,8 +59,6 @@
                                     <input type="file" class="form-control d-none" id="customFile1" />
                                 </div>
                             </div>
-                            <!-- <span class="text-black-50">edogaru@mail.com.my</span> -->
-                            <!-- <span> </span> -->
                         </div>
                     </div>
 
@@ -76,21 +91,6 @@
 
                     <div>
                         <div class="col-md-6 mt-3"><label class="labels">Batch</label></div>
-                        {{!-- <select class="form-select form-select-sm form-control" aria-label=".form-select-sm example" name="batch">
-                            <option selected>Select Batch</option>
-                            <option value="1">2021</option>
-                            <option value="2">2020</option>
-                            <option value="3">2019</option>
-                            <option value="4">2018</option>
-                            <option value="5">2017</option>
-                            <option value="6">2016</option>
-                            <option value="7">2015</option>
-                            <option value="8">2014</option>
-                            <option value="9">2013</option>
-                            <option value="10">2012</option>
-                            <option value="11">2011</option>
-                            <option value="12">2010</option> --}}
-                            {{!-- <input type="range" name="batch" id=""  max="2030" min="1940" class="form-control"> --}}
                             <input type="number" name="batch" id="" min="1940" max="2030" class="form-control" value="2020">
                         </select>
                     </div>
@@ -107,30 +107,15 @@
                             <option value="CE">CE</option>
                         </select>
                     </div>
-
                     <div class="row mt-3">
                         <div class="col-md-6"><label class="labels address">City</label><input type="text"
                                 class="form-control" placeholder="Enter Your City" value="" name="city"></div>
                         <div class="col-md-6"><label class="label address">State</label><input type="text"
                                 class="form-control" value="" placeholder="Enter Your State" name="state"></div>
                     </div>
-
-                    <!-- <div class="col-md-12"><label class="labels"></label><input type="text" class="form-control"
-                            placeholder="enter address line 1" value=""></div> -->
-
-
                     <div class="col-md-12 mt-3"><label class="labels">Contact Number</label><input type="number"
                             class="form-control" placeholder="Enter Contact Number" value="" name="contact"></div>
 
-                    <!-- <div class="col-md-12"><label class="labels">Address Line 2</label><input type="text"
-                            class="form-control" placeholder="enter address line 2" value=""></div> -->
-
-                    <!-- <div class="col-md-12"><label class="labels">Postcode</label><input type="text" class="form-control"
-                            placeholder="enter address line 2" value=""></div> -->
-                    <!-- <div class="col-md-12"><label class="labels">State</label><input type="text" class="form-control"
-                            placeholder="enter address line 2" value=""></div> -->
-                    <!-- <div class="col-md-12"><label class="labels">Area</label><input type="text" class="form-control"
-                            placeholder="enter address line 2" value=""></div> -->
                     <div class="col-md-12 mt-3"><label class="labels">Email ID</label><input type="email"
                             class="form-control" placeholder="Enter email id" value="" name="email"></div>
 
@@ -145,20 +130,15 @@
 
                     <div class="col-md-12">
                         <div class="mt-3">
-                            <!-- <div class="d-flex justify-content-between align-items-center experience"><span>Edit
-                                    Experience</span><span class="border px-3 p-1 add-experience"><i
-                                        class="fa fa-plus"></i>&nbsp;Experience</span></div><br> -->
                             <div class="col-md-12"><label class="labels">Skills & Experience</label>
                                 <textarea name="skillset" id="skills" cols="30" rows="4"
                                     class="form-control" name="skills"></textarea>
-                                <!-- type="text" class="form-control" placeholder="Skills and Experience" value=""> -->
                             </div> <br>
 
 
                             <div class="col-md-12 mt-1"><label class="labels">About</label>
                                 <textarea name="skillset" id="skills" cols="30" rows="3"
                                     class="form-control" name="about"></textarea>
-                                <!-- type="text" class="form-control" placeholder="Skills and Experience" value=""> -->
                             </div> <br>
                             
                             <div class="row mt-2">
@@ -167,40 +147,15 @@
                                 <div class="col-md-6"><label class="labels">Confirm Password</label><input type="text"
                                         class="form-control" value="" placeholder="Confirm Password" name="cpassword"></div>
                             </div>
-
-                            <!-- 
-                            <div class="col-md-12"><label class="labels">Additional Details</label><input type="text"
-                                    class="form-control" placeholder="additional details" value=""></div> -->
                         </div>
                     </div>
-                    <!-- <div class="col-md-12"><label class="labels">Education</label><input type="text"
-                            class="form-control" placeholder="education" value=""></div> -->
                 </div>
-                <!-- <div class="row mt-3">
-                    <div class="col-md-6"><label class="labels">Country</label><input type="text" class="form-control"
-                            placeholder="country" value=""></div>
-                    <div class="col-md-6"><label class="labels">State/Region</label><input type="text"
-                            class="form-control" value="" placeholder="state"></div>
-                </div> -->
                 <div class="mt-0 mb-2 text-center">
-                    {{!-- <button class="btn btn-primary profile-button" type="submit">Save
-                        Profile</button> --}}
                         <input type="submit" value="save profile">
                         </div>
 
             </div>
         </div>
-        <!-- <div class="col-md-4">
-            <div class="p-3 py-5">
-                <div class="d-flex justify-content-between align-items-center experience"><span>Edit
-                        Experience</span><span class="border px-3 p-1 add-experience"><i
-                            class="fa fa-plus"></i>&nbsp;Experience</span></div><br>
-                <div class="col-md-12"><label class="labels">Experience in Designing</label><input type="text"
-                        class="form-control" placeholder="experience" value=""></div> <br>
-                <div class="col-md-12"><label class="labels">Additional Details</label><input type="text"
-                        class="form-control" placeholder="additional details" value=""></div>
-            </div>
-        </div> -->
     </div>
     </div>
     </div>
