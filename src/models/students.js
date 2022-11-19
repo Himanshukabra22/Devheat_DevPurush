@@ -5,43 +5,51 @@ const validator = require("validator");
 
 const studentSchema = new mongoose.Schema({
     firstname: {
-        type:String
-        // required:true
+        type:String,
+        required:true
     },
     lastname: {
-        type:String
-        // required:true
+        type:String,
+        required:true
     },
     gender: {
-        type:String
-        // required:true
+        type:String,
+        required:true
     },
     batch: {
         type:Number,
-        // required:true
+        required:true
        
     },
+    college: {
+        type:String,
+        required:true
+    },
     branch: {
-        type:String
-        // required:true
+        type:String,
+        required:true
 
     },
     city: {
-        type:String
-        // required:true
+        type:String,
+        required:true
     },
     state: {
-        type:String
-        // required:true
+        type:String,
+        required:true
     },
     contact: {
         type:Number,
-        // required:true,
+        required:true,
         unique:true
+        // validate(value){
+        //     if(!validator.isContact(value)){
+        //         throw new Error("Wrong contact no.");
+        //     }
     },
     email: {
         type:String,
-        // required:true,
+        required:true,
         validate(value){
             if(!validator.isEmail(value)){
                 throw new Error("No such email exists.");
@@ -50,12 +58,12 @@ const studentSchema = new mongoose.Schema({
     },
     linkedin: {
         type:String,
-        // required:true,
+        required:true
         // unique:true
     },
     instagram: {
         type:String,
-        // required:true,
+        // required:true
         // unique:true
     },
     designation: {

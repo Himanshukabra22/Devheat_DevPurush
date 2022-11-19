@@ -19,7 +19,7 @@
   </head>
 
   <body style="background-color: #d2a475">
-    <header><!--NAVBAR-->
+    {{!-- <header><!--NAVBAR-->
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
           <!-- Navbar brand -->
@@ -59,7 +59,8 @@
 
       </nav>
 
-    </header>
+    </header> --}}
+    {{>header}}
     <!-- <section style="background-color: #eee;"> -->
     <section style="background-color: #d2a475;">
       <div class="container py-4 px-2">
@@ -87,7 +88,7 @@
                   style="width: 150px;"
                 />
                 <h5 class="my-3">{{name}}</h5>
-                <p class="text-muted mb-1 my-10">{{designation}}/p>
+                <p class="text-muted mb-1 my-10">{{designation}}</p>
                 <!-- <p class="text-muted mb-4">Bay Area, San Francisco, CA</p> -->
                 <div class="d-flex justify-content-center mb-2 my-4">
                   <button type="button" class="btn btn-primary">Follow</button>

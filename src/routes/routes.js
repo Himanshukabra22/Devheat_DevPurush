@@ -8,6 +8,9 @@ const userSchema = require("../models/students")
 router.get("/login", (req, res) => {
   res.render("login");
 });
+router.get("/search", (req, res) => {
+  res.render("search");
+});
 router.get("/signup", (req, res) => {
   res.render('Sign_up')
 });
@@ -199,8 +202,17 @@ router.get("/profilepage", (req, res) => {
 
 // //export
 
-
-
+router.post("/search", async(req,res)=>{
+  try{
+      let findData = await userSchema.find({ firstname:req.body.firstname, college:req.body.college, batch:req.body.batch})
+      // console.log(req.body);
+      console.log(findData);
+      res.json(findData);
+  }catch(err){
+    console.log(err);
+  }
+})
+ 
  
 router.post("/signup", async(req,res) =>{
 try{
