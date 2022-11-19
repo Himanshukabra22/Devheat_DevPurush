@@ -71,13 +71,13 @@
             <div class="card mb-4">
               <div class="card-body text-center cardCSS">
                 <img
-                  src="https://pngtree.com/freepng/user-vector-avatar_4830521.html"
+                  src="\Profile-Avatar-PNG.png"
                   alt=""
                   class="rounded-circle img-fluid"
                   style="width: 150px;"
                 />
                 
-                <h5 class="my-3">{{name}}</h5>
+                <h5 class="my-3">{{firstname}} {{lastname}}</h5>
                 <p class="text-muted mb-1 my-10">{{designation}}</p>
                 <!-- <p class="text-muted mb-4">Bay Area, San Francisco, CA</p> -->
                 <div class="d-flex justify-content-center mb-2 my-4">
@@ -125,6 +125,18 @@
                       </div>
                     </div>
                     <hr />
+
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <p class="mb-0">Instagram</p>
+                      </div>
+                      <div class="col-sm-9">
+                        <a
+                          href="{{instagram}}"
+                          target="_blank"
+                        >{{firstname}} {{lastname}}</a>
+                      </div>
+                    </div>
                   </div>
                 </ul>
               </div>
@@ -180,7 +192,7 @@
                 </div>
               </div>
             </div>
-            <div class="row">
+            <div class="row pb-4">
               <div class="col-md-12">
                 <div class="card mb-4 mb-md-0">
                   <div class="card-body cardCSS">
@@ -191,6 +203,22 @@
                     </p>
                     <ul class="list-group list-group-flush cardCSS">
                       <li class="list-group-item cardCSS">{{skills}}</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="card mb-4 mb-md-0">
+                  <div class="card-body cardCSS">
+                    <p class="mb-4"><span
+                        class="text-primary font-italic me-1"
+                      >About
+                      </span>
+                    </p>
+                    <ul class="list-group list-group-flush cardCSS">
+                      <li class="list-group-item cardCSS">{{about}}</li>
                     </ul>
                   </div>
                 </div>
