@@ -18,7 +18,7 @@ router.get("/signup", (req, res) => {
 router.get("/search", (req, res) => {
   res.render('Sign_up')
 });
-router.get("/home", (req, res) => {
+router.get("/", (req, res) => {
   res.render('home')
 });
 
@@ -213,6 +213,11 @@ router.post("/search", async(req,res)=>{
   }
 })
  
+router.get("/aboutus", (req, res) => {
+  res.render('aboutus')
+});
+
+
  
 router.post("/signup", async(req,res) =>{
 try{
@@ -272,29 +277,6 @@ try{
 });
 
 
-//sign in
-
-// router.post("/login", (req,res) =>{
-//   const {
-//         firstname,
-//         email,
-//         password
-//   } = req.body;
-//   userSchema.findOne({email:email},(err,result) =>{
-//     console.log(result);
-//     if(result === null)
-//     {
-//         res.send("no such data found!!")
-//     }
-//     else{
-//     if (email === result.email && password === result.password) {
-//       res.send("hi")
-//     }else{
-//       res.send("wrong credentials!!")
-//     }}
-//   })
-// })
-
 router.post("/login", async (req,res) =>{
     try{
         let findData = await userSchema.findOne({email:req.body.email})
@@ -325,10 +307,7 @@ router.post("/login", async (req,res) =>{
          console.log(email);
          const studentData = await userSchema.findOne({email:email});
          console.log(studentData);
-        //  res.send(studentData);
-        
-         // console.log(req.params);
-        //  console.log(req.params.email);
+
          if(!studentData){
              return res.status(404).send("no data found");
          }
