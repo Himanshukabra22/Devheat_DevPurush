@@ -313,7 +313,7 @@ router.post("/login", async (req,res) =>{
          console.log(email);
          const studentData = await userSchema.findOne({email:email});
          console.log(studentData);
-         res.send(studentData);
+        //  res.send(studentData);
         
          // console.log(req.params);
         //  console.log(req.params.email);
@@ -321,7 +321,7 @@ router.post("/login", async (req,res) =>{
              return res.status(404).send("no data found");
          }
          else{
-             res.send(studentData);
+             res.render("ProfilePage" , {firstname:studentData.firstname,lastname:studentData.lastname, gender:studentData.gender,batch:studentData.batch,branch:studentData.branch,contact:studentData.contact,email:studentData.email,linkedin:studentData.linkedin,instagram:studentData.instagram})
          }
       } catch (e) {
          res.status(500).send(e);           //status 500 is internal server error(i.e Data not present)
