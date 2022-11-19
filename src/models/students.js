@@ -17,12 +17,14 @@ const studentSchema = new mongoose.Schema({
         // required:true
     },
     batch: {
-        type:Number
+        type:Number,
         // required:true
+       
     },
     branch: {
         type:String
         // required:true
+
     },
     city: {
         type:String

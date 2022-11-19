@@ -294,15 +294,17 @@ router.post("/login", async (req,res) =>{
 
  // Get the Individual studnt data using Id
  
- router.get("/students/:email", async (req,res) =>{      //we can get anything like name email etc,
+ router.get("/profile/:email", async (req,res) =>{      //we can get anything like name email etc,
  
       try {
-         const _id = req.params.id;
-         const studentData = await student.findById(_id);
+         const email = req.params.email;
+         console.log(email);
+         const studentData = await userSchema.findOne({email:email});
+         console.log(studentData);
          // console.log(req.params);
-         // console.log(req.params.id);
+        //  console.log(req.params.email);
          if(!studentData){
-             return res.status(404).send();
+             return res.status(404).send("no data found");
          }
          else{
              res.send(studentData);
@@ -311,6 +313,7 @@ router.post("/login", async (req,res) =>{
          res.status(500).send(e);           //status 500 is internal server error(i.e Data not present)
       }
  });
+
  
 
 module.exports = router;
