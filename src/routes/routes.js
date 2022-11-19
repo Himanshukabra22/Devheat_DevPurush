@@ -204,10 +204,14 @@ router.get("/profilepage", (req, res) => {
 
 router.post("/search", async(req,res)=>{
   try{
-      let findData = await userSchema.find({ firstname:req.body.firstname, college:req.body.college, batch:req.body.batch})
+      console.log(req.body.firstname);
+
+      // let findData = await userSchema.find().or( [{"firstname":req.body.firstname},{"college":req.body.college}])
+      let findData = await userSchema.find({$or: [{"firstname":req.body.firstname},{"college":req.body.college}]},'firstname lastname gender batch college branch city state contact email linkedin instagram designation skills about') 
       // console.log(req.body);
       console.log(findData);
-      res.json(findData);
+      // res.json(findData);
+      res.render("search",{findData:findData});
   }catch(err){
     console.log(err);
   }
@@ -226,6 +230,7 @@ try{
         lastname,
         gender,
         batch,
+        college,
         branch,
         city,
         state,
@@ -248,6 +253,7 @@ try{
         lastname,
         gender,
         batch,
+        college,
         branch,
         city,
         state,
