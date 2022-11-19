@@ -15,6 +15,9 @@ router.get("/signup", (req, res) => {
 router.get("/search", (req, res) => {
   res.render('Sign_up')
 });
+router.get("/home", (req, res) => {
+  res.render('home')
+});
 
 router.get("/profilepage", (req, res) => {
   res.render('ProfilePage')
@@ -284,8 +287,9 @@ router.post("/login", async (req,res) =>{
     try{
         let findData = await userSchema.findOne({email:req.body.email})
         
-        res.json({findData})
+        // res.json({findData})
         console.log(findData);
+        res.redirect('home')
     }catch(err){
         console.log(err);
     }
@@ -301,6 +305,8 @@ router.post("/login", async (req,res) =>{
          console.log(email);
          const studentData = await userSchema.findOne({email:email});
          console.log(studentData);
+         res.send(studentData);
+        
          // console.log(req.params);
         //  console.log(req.params.email);
          if(!studentData){
