@@ -1,4 +1,5 @@
 const express = require("express");
+const env = require("dotenv");
 const hbs = require('hbs')
 require("./db/connection");
 const bodyparser = require("body-parser");
@@ -9,7 +10,7 @@ const path = require('path')
 const {PORT} = require("../ignore")
 
 
-const port = PORT || 3000;
+const port = process.env.PORT || 3000;
 
 const app = express();
 
