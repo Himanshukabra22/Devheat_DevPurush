@@ -286,10 +286,18 @@ try{
 router.post("/login", async (req,res) =>{
     try{
         let findData = await userSchema.findOne({email:req.body.email})
-        
-        // res.json({findData})
-        console.log(findData);
-        res.redirect('home')
+        if(!findData)
+        {
+          res.send("no such data found!!");
+        }
+        else{
+          if(req.body.password === findData.password)
+          {console.log(findData);
+          res.redirect('home');}
+          else{
+            res.send("Wrong Credentials!!");
+          }
+        }
     }catch(err){
         console.log(err);
     }
