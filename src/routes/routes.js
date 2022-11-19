@@ -237,7 +237,7 @@ try{
           console.log("error");
         }
       })
-      res.redirect("/signup");
+      res.redirect("/signup");7
     }
     else{
       res.send("passwords not matching")
@@ -245,6 +245,25 @@ try{
  }catch(error){
    res.render("ahh! error occured")
  }
+});
+
+
+//sign in
+
+router.post("/login", (req,res) =>{
+  const {
+        firstname,
+        email,
+        password
+  } = req.body;
+  userSchema.findOne({email:email},(err,result) =>{
+    console.log(result);
+    if (email === result.email && password === result.password) {
+      res.render("/")
+    }else{
+      console.log(err); 
+    }
+  })
 })
 
 
