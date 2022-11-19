@@ -15,7 +15,7 @@ router.get("/signup", (req, res) => {
 router.get("/search", (req, res) => {
   res.render('Sign_up')
 });
-router.get("/home", (req, res) => {
+router.get("/", (req, res) => {
   res.render('home')
 });
 
