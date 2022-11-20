@@ -40,6 +40,9 @@ Requirement: you'll require node.js to be installed on system.
 4. Bookmark favorites.
 and many more...
 
+## Tech Stack used
+1. Nodejs, Expressjs, Mongodb, Mongoose, Html, Css, Javascript, Bootstrap, Handlebars.
+
 ## links
 
 Repo link: https://github.com/Himanshukabra22/Devheat_DevPurush
